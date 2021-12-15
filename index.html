@@ -6,30 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PracticaFin1Trimestre Ignacio Aranda</title>
     <style>
-        #frame{
-            width: 1200px;
-            height: 800px;
-            position: relative;
-            top: 0px;
-            left: 0px;
-            background-color: red;
+        body{
+            background-color:lightblue;
         }
-        #fotoantigua{
+        #frame {
+            width: 50vw;
+            height: 50vh;
+            background-color: red;
+            display: block;
+            margin:auto;
+        }
+        
+        #marco {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-        }
-        div{
-            height: 1000px;
-            display:flex;
-            justify-content: center;
+            display: flex;
+            align-content: center;
             align-items: center;
+        }
+        #fotoantigua {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media screen and (orientation:landscape) {
+            #frame {
+                max-width: 1920px;
+                max-height: 1280px;
+                background-color:lightpink;
+            }
         }
         @media screen and (orientation:portrait) {
             #frame {
                 width: 600px;
-                height: 900px;
-                background-color: cyan;
+                height: 1200px;
+                justify-items:center;
+                background-color: lightgreen;
             }
         }  
 
@@ -37,23 +49,26 @@
     </style>
 </head>
 <body>
-    <picture id="frame">
-        
-        <source media="(orientation: landscape) and (min-width:1920px)" srcset="Recursos\IMG .HEIC\HEICFelizHorizontal1920x1080.heic" type="image/heic">
-        <source media="(orientation: landscape) and (min-width:1920px)" srcset="Recursos\IMG .WEBP\WEBPFelizHorizontal1920x1080.webp" type="image/webp">
-        <source media="(orientation: landscape) and (min-width:1920px)" srcset="Recursos\Escaladas\EscFelizHorizontal1920x1080.jpg" type="image/jpg">
-        <source media="(orientation: portrait) and (min-width: 1200px)" srcset="Recursos\IMG .HEIC\HEICPerroMarronVertical1200X1920.heic" type="image/heic">
-        <source media="(orientation: portrait) and (min-width: 1200x)" srcset="Recursos\IMG .WEBP\WEBPPerroMarronVertical1200X1920.webp" type="image/webp">
-        <source media="(orientation: portrait) and (min-width: 1200px)" srcset="Recursos\Escaladas\EscPerroMarronVertical1200X1920.jpg" type="image/jpg">
-        <source media="(orientation: landscape) and (min-width: 800px)" srcset="Recursos\IMG .HEIC\HEICCachorrosHorizontal800x495.heic" type="image/heic">
-        <source media="(orientation: landscape) and (min-width: 800px)" srcset="Recursos\IMG .WEBP\WEBPCachorrosHorizontal800x495.wepb" type="image/webp">
-        <source media="(orientation: landscape) and (min-width: 800px)" srcset="Recursos\Escaladas\EscCCachorrosHorizontal800x495.jpg" type="image/jpg">
-        <source media="(orientation: portrait) and (min-width:600px)" srcset="Recursos\IMG .HEIC\HEICLabradorVertical600x1920.heic" type="image/heic">
-        <source media="(orientation: portrait) and (min-width:600px)" srcset="Recursos\IMG .WEBP\WEBPLabradorVertical600x1920.web" type="image/webp">
-        <source media="(orientation: portrait) and (min-width:600px)" srcset="Recursos\Escaladas\EscLabradorVertical600x1920.jpg" type="image/jpg">
+    <div id=marco>
+        <picture id="frame">
+
+            <source media="(orientation: landscape) and (min-width:1201)" srcset="Recursos\IMG .HEIC\HEICFelizHorizontal1920x1080.heic" type="image/heic">
+            <source media="(orientation: landscape) and (min-width:1201px)" srcset="Recursos\IMG .WEBP\WEBPFelizHorizontal1920x1080.webp" type="image/webp">
+            <source media="(orientation: landscape) and (min-width:1201px)" srcset="Recursos\Escaladas\EscFelizHorizontal1920x1080.jpg" type="image/jpg">
+            <source media="(orientation: portrait) and (min-width: 601px)" srcset="Recursos\IMG .HEIC\HEICPerroMarronVertical1200X1920.heic" type="image/heic">
+            <source media="(orientation: portrait) and (min-width: 601x)" srcset="Recursos\IMG .WEBP\WEBPPerroMarronVertical1200X1920.webp" type="image/webp">
+            <source media="(orientation: portrait) and (min-width: 601px)" srcset="Recursos\Escaladas\EscPerroMarronVertical1200X1920.jpg" type="image/jpg">
+            <source media="(orientation: landscape) and (min-width: 501px)" srcset="Recursos\IMG .HEIC\HEICCachorrosHorizontal800x495.heic" type="image/heic">
+            <source media="(orientation: landscape) and (min-width: 501px)" srcset="Recursos\IMG .WEBP\WEBPCachorrosHorizontal800x495.wepb" type="image/webp">
+            <source media="(orientation: landscape) and (min-width: 501px)" srcset="Recursos\Escaladas\EscCCachorrosHorizontal800x495.jpg" type="image/jpg">
+            <source media="(orientation: portrait) and (min-width:101px)" srcset="Recursos\IMG .HEIC\HEICLabradorVertical600x1920.heic" type="image/heic">
+            <source media="(orientation: portrait) and (min-width:101px)" srcset="Recursos\IMG .WEBP\WEBPLabradorVertical600x1920.web" type="image/webp">
+            <source media="(orientation: portrait) and (min-width:101px)" srcset="Recursos\Escaladas\EscLabradorVertical600x1920.jpg" type="image/jpg">
+
+            <img id="fotoantigua" alt="FotoNavegadorAntiguo" title="FotoNavegadorAntiguo" src="CachorrosHorizontal1920x1080.jpg">
+        </picture>
+    </div>
     
-        <img id="fotoantigua" alt="FotoNavegadorAntiguo" title="FotoNavegadorAntiguo" src="Recursos\Originales/CachorrosHorizontal1920x1080.jpg">
-    </picture>
     
 </body>
 </html>
