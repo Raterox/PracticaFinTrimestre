@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index </title>
+    <style>
+        body{
+            background-color: lightgreen;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 650px;
+            position: center;
+        }
+        #portaFoto {
+            width: 50vw;
+            height: 50vh;
+            background-color: red;
+            display: flex;
+            margin: auto;
+            overflow: hidden;
+        }
+    
+        #fotoAntigua {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        @media screen and (orientation:landscape) {
+            #portaFoto{
+                max-width: 1200px;
+                max-height: 800px;
+                background-color: red;
+            } 
+        }
+        @media screen and (orientation:portrait) {
+            #portaFoto{
+                max-width: 600px;
+                max-height: 900px;
+                background-color: red;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="fotoAntigua">
+        <picture id="portaFoto">
+        
+            <source media="(orientation: landscape) and (min-width:1201px)" srcset="Foto31920.heic" type="image/heic">
+            <source media="(orientation: landscape) and (min-width:1201px)" srcset="Foto31920.webp" type="image/webp">
+            <source media="(orientation: landscape) and (min-width:1201px)" srcset="Foto31920.jpg" type="image/jpg">
+    
+            <source media="(orientation: portrait) and (min-width: 801px)" srcset="Foto11200.heic" type="image/heic">
+            <source media="(orientation: portrait) and (min-width: 801px)" srcset="Foto11200.webp" type="image/webp">
+            <source media="(orientation: portrait) and (min-width: 801px)" srcset="Foto11200.jpg" type="image/jpg">
+        
+            <source media="(orientation: landscape) and (min-width: 601px)" srcset="Foto4800.heic" type="image/heic">
+            <source media="(orientation: landscape) and (min-width: 601px)" srcset="Foto4800.webp" type="image/webp">
+            <source media="(orientation: landscape) and (min-width: 601px)" srcset="Foto4800.jpg" type="image/jpg">
+    
+            <source media="(orientation: portrait) and (min-width: 301px)" srcset="Foto2600.heic" type="image/heic">
+            <source media="(orientation: portrait) and (min-width: 301px)" srcset="Foto2600.webp" type="image/webp">
+            <source media="(orientation: portrait) and (min-width: 301px)" srcset="Foto2600.jpg" type="image/jpg">
+        
+            <img id="fotoAntigua" alt="Foto si el navegador es antiguo" title="Foto si el navegador es antiguo" src="Foto2600.jpg" />
+        </picture>
+    </div>
+</body>
+
+
+
+
+</html>
